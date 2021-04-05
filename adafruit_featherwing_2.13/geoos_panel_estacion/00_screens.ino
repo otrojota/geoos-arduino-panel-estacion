@@ -28,7 +28,7 @@ Adafruit_SSD1675 display(250, 122, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY)
 
 U8G2_FOR_ADAFRUIT_GFX fonts;
 
-void sc_setup() {
+void sc_setup() {  
   display.begin();
   //display.setRotation(2);
   fonts.begin(display);
@@ -44,7 +44,7 @@ void sc_iniciando() {
   fonts.setForegroundColor(GxEPD_BLACK);
   fonts.setBackgroundColor(GxEPD_WHITE);
   fonts.setCursor(10,40);
-  fonts.println("Iniciando.");
+  fonts.println("[1.0.3] Iniciando.");
   fonts.setCursor(10,80);
   fonts.println("Por favor espere ...");
   //display.update();

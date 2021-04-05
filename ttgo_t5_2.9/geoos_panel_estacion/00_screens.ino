@@ -43,7 +43,7 @@ void sc_iniciando() {
   fonts.setForegroundColor(GxEPD_BLACK);
   fonts.setBackgroundColor(GxEPD_WHITE);
   fonts.setCursor(10,40);
-  fonts.println("Iniciando.");
+  fonts.println("[1.0.3] Iniciando.");
   fonts.setCursor(10,80);
   fonts.println("Por favor espere ...");
   display.update();

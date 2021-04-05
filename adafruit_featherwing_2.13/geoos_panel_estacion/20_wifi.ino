@@ -80,6 +80,10 @@ void wifi_loop() {
           Serial.println(st);
           wifi_status = WFS_ERROR;
           break;
+        case WL_NO_SSID_AVAIL:
+          clearWIFI();
+          ESP.restart();
+          break; 
       }
     }
   }

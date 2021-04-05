@@ -76,10 +76,15 @@ void wifi_loop() {
         case WL_CONNECT_FAILED:
         case WL_CONNECTION_LOST:
         case WL_DISCONNECTED:
+          WiFi.disconnect();
           Serial.println("Error de Conexion");
           Serial.println(st);
           wifi_status = WFS_ERROR;
           break;
+        case WL_NO_SSID_AVAIL:
+          clearWIFI();
+          ESP.restart();
+          break; 
       }
     }
   }
